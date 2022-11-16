@@ -1,0 +1,53 @@
+<!Exercise7:Arrays and Strings in javascript REGNO:21b01a1210>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <p id="2"></p>
+        <script>
+            const people = ["Greg", "Mary", "Devon", "James"]
+            document.getElementById("2").innerHTML = people.slice(1)
+            document.getElementById("2").innerHTML = people.slice(0, 3);
+            const peop = people.unshift('Matt')
+            document.getElementById("2").innerHTML = people;
+            const p = people.push("sri")
+            document.getElementById("2").innerHTML = people;
+            var arr = []
+            function count(people) {
+                for (let x in people) {
+                    if (x <= 2) {
+                        arr.push(people[x])
+                    }
+                }
+                return arr;
+            }
+            document.getElementById("2").innerHTML = count(people);
+            document.getElementById("2").innerHTML = people.slice(1, 2);
+            function mary(people) {
+                for (let x in people) {
+                    if (people[x] == "Mary") {
+                        return x;
+                    }
+                }
+            }
+            document.getElementById("2").innerHTML = mary(people);
+            function foo(people) {
+                for (let x in people) {
+                    if (people[x] != "foo") {
+                        return -1;
+                    }
+                }
+            }
+            document.getElementById("2").innerHTML = foo(people);
+            const withBob = people.push("Bob")
+            document.getElementById("2").innerHTML = people
+        </script>
+    </body>
+
+    </html>
